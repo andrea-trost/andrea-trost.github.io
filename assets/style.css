@@ -123,3 +123,31 @@ footer.strip { margin-top: auto; padding: 32px 0; display: flex; flex-direction:
 footer.strip .cap { font-size: 12px; color: var(--dim); }
 .spectrum { height: 128px; width: 100%; display: block; }
 .bar { flex: 1; min-width: 0; background: var(--dim); }
+
+/* ── light theme ───────────────────────────────────────────── */
+html[data-theme="light"] {
+  --ground: #f5f3eb;
+  --panel: #ece9df;
+  --line: #ccc9bc;
+  --line-strong: #b8b4a6;
+  --dim: #7a7870;
+  --body: #4a4840;
+  --text: #1e1d18;
+  --bright: #0d0c09;
+  --accent: #8a6400;
+}
+
+/* ── theme toggle button ───────────────────────────────────── */
+.theme-btn {
+  background: none;
+  border: 1px solid var(--line-strong);
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+.theme-btn:hover { color: var(--accent); border-color: var(--accent); }

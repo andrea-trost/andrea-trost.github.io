@@ -187,4 +187,23 @@
   if (page === 'research') { research(); }
   if (page === 'publications') { publications(); }
   if (page === 'cv') { cv(); }
+
+  // ── theme toggle ──────────────────────────────────────────────
+  (function () {
+    var btn = document.getElementById('theme-btn');
+    if (!btn) return;
+    function apply(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      btn.textContent = theme === 'light' ? '[ dark ]' : '[ light ]';
+      try { localStorage.setItem('theme', theme); } catch (e) {}
+    }
+    // init label from current state
+    var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    btn.textContent = cur === 'light' ? '[ dark ]' : '[ light ]';
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      apply(next);
+    });
+  })();
+
 })();
