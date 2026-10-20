@@ -4,6 +4,7 @@
    - Each entry: title, authors, venue, date, doi, arxiv, lists.
        doi   : just the DOI, e.g. '10.1103/PhysRevD.111.083034'  (leave '' if none)
        arxiv : just the id, e.g. '2603.02318'                    (leave '' if none)
+       url   : optional other link (e.g. Zenodo), used as the main link when set
        lists : which menu entries it appears in, e.g. ['first-author', 'all']
    - Entries are shown in the order written here, newest first is the convention.
    - Some volumes/page numbers are left out on purpose: add them to "venue" once checked.
@@ -27,5 +28,5 @@ window.PUBLICATIONS = [
   { lists: ['all'], title: "CUBES phase A design overview", authors: "Zanutta, A., et al.", venue: "Exp. Astron.", date: "May 2022", doi: "10.1007/s10686-022-09837-w", arxiv: "" },
   { lists: ['all'], title: "The CUBES instrument model and simulation tools", authors: "Genoni, M., et al.", venue: "Exp. Astron.", date: "Mar 2022", doi: "10.1007/s10686-022-09844-x", arxiv: "" },
   { lists: ['all'], title: "Challenges in the spectral kitchen: Astrocook and beyond", authors: "Cupani, G., et al.", venue: "Spectral Fidelity, proceedings", date: "Oct 2023", doi: "10.5281/zenodo.8343745", arxiv: "" },
-  { lists: ['posters', 'all'], title: "Measuring the Cosmic Redshift Drift with the VLT: A Long-Term ESPRESSO Program into the ELT Era", authors: "Trost, A.", venue: "poster · VLT Beyond 2030, ESO Munich · Best Poster Prize", date: "Jan 2026", doi: "", arxiv: "" }
+  { lists: ['posters', 'all'], title: "Measuring the Cosmic Redshift Drift with the VLT: A Long-Term ESPRESSO Program into the ELT Era", authors: "Trost, A.", venue: "poster · VLT Beyond 2030, ESO Munich · Best Poster Prize", date: "Jan 2026", doi: "", arxiv: "", url: "https://zenodo.org/records/18804156" }
 ];

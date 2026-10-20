@@ -157,12 +157,14 @@
     }, function (p, i) {
       var doi = p.doi ? 'https://doi.org/' + p.doi : '';
       var arx = p.arxiv ? 'https://arxiv.org/abs/' + p.arxiv : '';
-      var href = doi || arx || '#';
+      var url = p.url || '';
+      var href = url || doi || arx || '#';
       return '<div class="entry"><div class="when">[' + (i + 1) + ']</div><div class="body">' +
         '<a class="t" href="' + esc(href) + '">' + esc(p.title) + '</a>' +
         '<div class="m"><div>' + esc(p.authors) + '</div><div>' + esc(p.venue) + ' · ' + esc(p.date) + '</div>' +
         (doi ? '<a href="' + esc(doi) + '">[ doi ]</a>' : '') +
         (arx ? '<a href="' + esc(arx) + '">[ arxiv ]</a>' : '') +
+        (url ? '<a href="' + esc(url) + '">[ link ]</a>' : '') +
         '</div></div></div>';
     });
   }
